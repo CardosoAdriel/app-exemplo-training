@@ -1,0 +1,79 @@
+<!-- <section class="componente-principal">
+  <article class="articles">
+    <h3>{{ titleNgStyle }} | {{ titleNgClass }}</h3>
+
+    <h5
+      [class.h5-blue]="testClass === 'azul'"
+      [class.h5-red]="testClass === 'vermelho'"
+    > Classes CSS com Property Binding </h5>
+
+    <h5 [ngClass]="{
+      'h5-blue': subTitleClass,
+      'h5-red': !subTitleClass
+    }"
+    >Classe CSS com ngClass</h5>
+
+    <button (click)="alterClass()">Alterar Style Boolean</button>
+    <button (click)="alterClass('azul')">Alterar Style Azul</button>
+    <button (click)="alterClass('vermelho')">Alterar Style Vermelho</button>
+  </article>
+
+</section> -->
+
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> {{ titleNgStyle }} | {{ titleNgClass }} </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        ngClass - Podemos atribuir classes a elementos html dependendo de qualquer condição verdadeira ou falsa <br>
+        ngStyle - Podemos atribuir estilos dinamicos a qualquer elemento html obtendo informações do .TS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <article class="articles">
+      <p
+        [ngClass]="{
+          'h5-blue': subTitleClass,
+          'h5-red': !subTitleClass
+        }"
+      > Classe CSS com ngClass </p>
+      <button mat-raised-button (click)="alterClass()">
+        Alterar Style Boolean
+      </button>
+      <p
+        [class.h5-blue]="testClass === 'azul'"
+        [class.h5-red]="testClass === 'vermelho'"
+      > Classes com Property Binding </p>
+      <button mat-raised-button color="primary" (click)="alterClass('azul')">
+        Alterar Style Azul
+      </button>
+      <button mat-raised-button color="warn" (click)="alterClass('vermelho')">
+        Alterar Style Vermelho
+      </button>
+    </article>
+
+    <br />
+    <mat-divider></mat-divider>
+    <br />
+
+    <article class="articles">
+      <p [ngStyle]="estiloClasse" > Estilo com ngStyle (classe com atríbutos) </p>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Qual cor ?</mat-label>
+        <input matInput [(ngModel)]="color" placeholder="Qual cor ?" />
+      </mat-form-field>
+      <p [ngStyle]="{'color': color}" > Altere esta cor Acima !</p>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Qual tamanho ?</mat-label>
+        <input matInput [(ngModel)]="tamanho" placeholder="Tamanho da Fonte ?" />
+      </mat-form-field>
+      <p [ngStyle]="{'font-size.px': tamanho}">Altere o tamanho desse texto acima !</p>
+
+    </article>
+
+  </mat-expansion-panel>
+</mat-accordion>

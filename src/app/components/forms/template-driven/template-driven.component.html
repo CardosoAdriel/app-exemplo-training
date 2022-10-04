@@ -1,0 +1,29 @@
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> Template Driven </strong>
+      </mat-panel-title>
+      <!-- <mat-panel-description>
+        Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+      </mat-panel-description> -->
+    </mat-expansion-panel-header>
+
+    <form #user="ngForm" (ngSubmit)="onClickSubmit(user)">
+
+      <mat-form-field appearance="fill">
+        <mat-label>Entre com um valor</mat-label>
+        <input matInput type="text" name="login" ngModel placeholder="Digite seu login ..." required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Entre com um valor</mat-label>
+        <input matInput type="text" name="password" ngModel placeholder="Digite sua senha ..." required>
+      </mat-form-field>
+
+      <button mat-raised-button type="submit"> Logar </button>
+
+    </form>
+
+  </mat-expansion-panel>
+</mat-accordion>

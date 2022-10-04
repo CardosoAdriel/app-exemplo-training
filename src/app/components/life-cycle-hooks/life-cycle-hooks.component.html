@@ -1,0 +1,20 @@
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> Life cycle Hooks </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p *ngIf="destroy">Numero: <strong>{{ title }}</strong></p>
+
+    <button mat-raised-button color="primary" (click)="alteraValor()"> Alterar </button>
+    <br><div></div>
+    <button mat-raised-button color="accent" (click)="destruir()">Destruir</button>
+  </mat-expansion-panel>
+</mat-accordion>
+
+

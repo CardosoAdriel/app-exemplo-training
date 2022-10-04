@@ -1,0 +1,108 @@
+<section class="principal">
+  <h1>Data-Binding</h1>
+
+  <section class="conteudo">
+    <!-- INTERPOLAÇÃO NO CONTEÚDO DA TAG HTML -->
+    <mat-accordion>
+      <mat-expansion-panel class="flex-column">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong> Interpolação </strong>
+          </mat-panel-title>
+          <mat-panel-description>
+            Obtendo informações do .ts e usando expressões matemáticas no HTML
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>
+          Este é o titulo da pagina: <strong>{{ getTitle() }}</strong>
+        </p>
+        <p>
+          A soma de 10 + 10 = <strong>{{ 10 + 10 }}</strong>
+        </p>
+        <p>
+          Estou gostando de Angular? <strong>{{ likeAngular }}</strong>
+        </p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong> Property Binding </strong>
+          </mat-panel-title>
+          <mat-panel-description>
+            Obtendo informações do .ts e passando nas propriedades de tags HTML
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <img src="{{ urlImageTraining }}" />
+        <br />
+        <img [src]="urlImageTraining" />
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Entre com um valor</mat-label>
+          <input matInput [value]="valueInput" />
+        </mat-form-field>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel class="flex-column">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong> Event Binding </strong>
+          </mat-panel-title>
+          <mat-panel-description>
+            Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <button mat-raised-button color="primary" (click)="emitirEvento()">Emitir um evento</button>
+        <br>
+        <mat-form-field appearance="fill" style="margin-top: 20px;">
+          <mat-label>Digite...</mat-label>
+          <input matInput (change)="eventoKeyDown($event)" value="" />
+        </mat-form-field>
+        <br>
+        <p>Texto digitado: <strong>{{ valueEvent }}</strong></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+
+    <mat-accordion>
+      <mat-expansion-panel class="flex-column">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <strong> Two Way Binding </strong>
+          </mat-panel-title>
+          <mat-panel-description>
+            Exemplos de utilização da interpolação como proriedades html
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Digite uma palavra...</mat-label>
+          <input matInput #twoWay1
+          [value]="valueTwoWay"
+          (input)="valueTwoWay = twoWay1.value" />
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Digite...</mat-label>
+          <input matInput [(ngModel)]="valueTwoWay" />
+        </mat-form-field>
+        <br>
+        <p>O texto digitado é: <strong>{{ valueTwoWay }}</strong></p>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </section>
+</section>
+
+
+<!--
+
+  1 - Criar um componente novo dentro de components/data-binding/
+
+  2 - Escrever uma estrutura com todos os tipos de bindings
+
+ -->

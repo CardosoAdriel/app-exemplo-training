@@ -5,6 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+
+  dataCyle = "Title Cycle via Input()"
   title = 'primeiro-app-angular';
 }

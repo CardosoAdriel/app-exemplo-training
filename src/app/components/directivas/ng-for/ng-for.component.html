@@ -1,0 +1,35 @@
+<!--  -->
+
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> {{ titleNgFor }} </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        Com o ngFor poderemos realizar iterações nos arrays do nosso componente, e exibir
+        templates dinâmicos com as informações contidas nesse array
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <article class="articles">
+      <p> <strong>Array Simples</strong> </p>
+
+      <ul>
+        <li *ngFor="let time of times">Entrou no campeonato - <strong>{{ time }}</strong> </li>
+      </ul>
+    </article>
+
+    <mat-divider></mat-divider>
+    <br>
+
+    <article class="articles">
+      <p> <strong>Array de objetos</strong> </p>
+      <div *ngFor="let user of users">
+        <p>Login de acesso: <strong>{{ user.login }}</strong></p>
+        <p>Senha: <strong>{{ user.senha }}</strong></p>
+        <p>email: <strong>{{ user.email }}</strong></p>
+      </div>
+    </article>
+
+  </mat-expansion-panel>
+</mat-accordion>

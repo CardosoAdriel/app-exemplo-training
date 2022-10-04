@@ -1,0 +1,40 @@
+<!-- -->
+
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> {{ titleNgSwitch }} </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        Com ngSwitch podemos esperar varios indicadores de uma variável e exibir conteúdos específicos
+        dependendo de cada condição
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <nav>
+      <button mat-raised-button (click)="selecionar(0)">Default</button>
+      <button mat-raised-button color="primary" (click)="selecionar(1)">
+        caso 1
+      </button>
+      <button mat-raised-button color="accent" (click)="selecionar(2)">
+        caso 2
+      </button>
+      <button mat-raised-button color="warn" (click)="selecionar(3)">
+        caso 3
+      </button>
+    </nav>
+
+    <ng-container [ngSwitch]="condicional" style="margin-top: 20px;">
+      <br>
+      <strong>
+      <p *ngSwitchDefault="0">Sem Caso</p>
+
+      <p *ngSwitchCase="1">Caso 01 selecionado</p>
+
+      <p *ngSwitchCase="2">Caso 02 selecionado</p>
+
+      <p *ngSwitchCase="3">Caso 03 selecionado</p>
+    </strong>
+    </ng-container>
+  </mat-expansion-panel>
+</mat-accordion>

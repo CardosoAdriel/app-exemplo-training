@@ -1,0 +1,18 @@
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> {{ titleNgIf }} </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        O ngIf nos ajuda a exibir um conteúdo dependendo da condição atribuida, pode ser ela
+        uma expressão matematica, um número, um expressão boolean, uma string etc...
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <p *ngIf="umNumero > 0 || !mostrarOuNao; else nao"> Eu quero Mostrar !!</p>
+    <ng-template #nao>
+      <p>Não quero Mostrar !!</p>
+    </ng-template>
+    <button mat-raised-button color="primary" (click)="alterar()">Alterar</button>
+  </mat-expansion-panel>
+</mat-accordion>

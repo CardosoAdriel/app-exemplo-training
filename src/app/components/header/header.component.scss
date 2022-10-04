@@ -1,0 +1,19 @@
+.header {
+  justify-content: space-around;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    li {
+
+      &:hover a {
+        text-decoration: underline;
+        transition: all 1s ease-in-out;
+      }
+    }
+  }
+
+}

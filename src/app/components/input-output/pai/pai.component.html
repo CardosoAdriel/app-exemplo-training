@@ -1,0 +1,41 @@
+<!-- <section class="componente-principal">
+  <h3></h3>
+
+  <article class="articles">
+    <mat-form-field appearance="fill" style="margin-top: 20px">
+      <mat-label>Digite o titulo do componente filho...</mat-label>
+      <input matInput [(ngModel)]="tituloFilho" />
+    </mat-form-field>
+  </article>
+
+  <app-filho
+    [titulo]="tituloFilho"
+    (dataEnviar)="receberEvento($event)"
+  ></app-filho>
+</section> -->
+
+<mat-accordion>
+  <mat-expansion-panel class="flex-column">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <strong> Input / Output - PAI </strong>
+      </mat-panel-title>
+      <mat-panel-description>
+        Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <article class="articles">
+      <mat-form-field appearance="fill" style="margin-top: 20px">
+        <mat-label>Digite o titulo do componente filho...</mat-label>
+        <input matInput [(ngModel)]="tituloFilho" />
+      </mat-form-field>
+      <br />
+      <app-filho
+        [titulo]="tituloFilho"
+        (dataEnviar)="receberEvento($event)"
+      ></app-filho>
+    </article>
+
+  </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,118 @@
+<section class="principal">
+  <h1> PIPES </h1>
+
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> UPERCASE | lowercase </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <p>{{ dataTransform | uppercase }}</p>
+
+      <p> {{ dataTransform | lowercase }} </p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> DATA </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+      <p>Data sem formato: {{ dataHoje }}</p>
+      <p>Data: {{ dataHoje | date }}</p>
+      <p>Data: {{ dataHoje | date: 'dd/MM/yyyy' }}</p>
+      <p>Data: {{ dataHoje | date: 'shortTime' }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> Decimal Pipe </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <p>Numero {{ 454.7852463 | number: '3.1-2'}} </p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> JSON </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <p>{{ umJson | json }}</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> Percent Pipe </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <p>{{ 1.35 | percent }}</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> Slice Pipe </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <p>{{ mesAno | slice: 6:11 }}</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel class="flex-column">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <strong> Pipe Personalizado - Raiz Quadrada </strong>
+        </mat-panel-title>
+        <!-- <mat-panel-description>
+          Exemplo de emissão de eventos via HTML e realizano ação dentro do TS
+        </mat-panel-description> -->
+      </mat-expansion-panel-header>
+
+      <p> A raiz quadrada de 25 é: {{ 25 | raizQuadrada | number: '.2-2'}}</p>
+      <p> A raiz quadrada de 80 é: {{ 80 | raizQuadrada | number: '.1-1'}}</p>
+
+    </mat-expansion-panel>
+  </mat-accordion>
+
+</section>
